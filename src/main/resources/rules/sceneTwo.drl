@@ -1,0 +1,72 @@
+package rules;
+dialect  "java"
+import com.example.model.ApproveUser
+import com.example.model.Results
+import com.example.utils.TimeHelper
+
+//老师指纹认证  预期：拒绝   返回错误信息：认证方式不满足
+rule "sceneTwo  teacher"
+    when
+        a:ApproveUser(a.getUser() == "teacher" && a.getFinger() == "finger")
+    then
+        Results r = new Results();
+        r.setFlag("拒绝");
+        r.setErrorMessage("认证方式不满足");
+        System.out.println("老师指纹认证拒绝，认证方式不满足");
+end
+
+//老师人脸 +指纹  预期：允许
+rule "sceneTwo  teacher2"
+    when
+        a:ApproveUser(a.getUser() == "teacher" && a.getFinger() == "finger" && a.getFace() == "face")
+    then
+        Results r = new Results();
+        r.setFlag("允许");
+        r.setErrorMessage("");
+        System.out.println("老师指纹认证允许");
+end
+
+//学生指纹认证  预期：拒绝   返回错误信息：认证方式不满足
+rule "sceneTwo  student"
+    when
+        a:ApproveUser(a.getUser() == "student" && a.getFinger() == "finger")
+    then
+        Results r = new Results();
+        r.setFlag("拒绝");
+        r.setErrorMessage("学生认证方式不满足");
+        System.out.println("学生指纹认证拒绝，认证方式不满足");
+end
+
+//学生用户名 + 动态口令 认证，时间10点；预期：允许
+rule "sceneTwo  student2"
+    when
+        a:ApproveUser(a.getUser() == "student" && a.getFinger() == "userName" + a.getPassword() == "password" && TimeHelper.isBelong())
+    then
+        Results r = new Results();
+        r.setFlag("允许");
+        r.setErrorMessage("");
+        System.out.println("学生用户名 + 动态口令认证 在允许时间范围内允许");
+end
+
+//学生通过用户名 + 动态口令认证，时间24点  预期：拒绝  返回错误信息：时间不匹配
+rule "sceneTwo  student3"
+    when
+        a:ApproveUser(a.getUser() == "student" && a.getFinger() == "userName" + a.getPassword() == "password" && TimeHelper.isBelong())
+    then
+        Results r = new Results();
+        r.setFlag("拒绝");
+        r.setErrorMessage("时间不匹配");
+        System.out.println("学生用户名 + 动态口令认证 不在允许时间范围内拒绝");
+end
+
+//学生人脸认证，时间10点，预期：允许
+rule "sceneTwo  student4"
+    when
+        a:ApproveUser(a.getUser() == "student" && a.getFace() == "face" && TimeHelper.isBelong())
+    then
+        Results r = new Results();
+        r.setFlag("允许");
+        r.setErrorMessage("");
+        System.out.println("学生人脸认证在允许时间范围内允许");
+end
+

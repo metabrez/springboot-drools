@@ -1,0 +1,419 @@
+package rules;
+dialect  "java"
+import com.example.model.Conditions
+
+//60条规则同时匹配
+rule "rule 1"
+    when
+    c:Conditions()
+    then
+    System.out.println("规则1");
+end
+
+rule "rule 2"
+    when
+    c:Conditions()
+    then
+    System.out.println("规则2");
+end
+
+rule "rule 3"
+    when
+    c:Conditions()
+    then
+    System.out.println("规则3");
+end
+
+rule "rule 4"
+    when
+    c:Conditions()
+    then
+    System.out.println("规则4");
+end
+
+rule "rule 5"
+    when
+    c:Conditions()
+    then
+    System.out.println("规则5");
+end
+
+rule "rule 6"
+    when
+    c:Conditions()
+    then
+    System.out.println("规则6");
+end
+
+rule "rule 7"
+    when
+    c:Conditions()
+    then
+    System.out.println("规则7");
+end
+
+rule "rule 8"
+    when
+    c:Conditions()
+    then
+    System.out.println("规则8");
+end
+
+rule "rule 9"
+    when
+    c:Conditions()
+    then
+    System.out.println("规则9");
+end
+
+rule "rule 10"
+    when
+    c:Conditions()
+    then
+    System.out.println("规则10");
+end
+
+rule "rule 11"
+    when
+    c:Conditions()
+    then
+    System.out.println("规则11");
+end
+
+rule "rule 12"
+    when
+    c:Conditions()
+    then
+    System.out.println("规则12");
+end
+
+rule "rule 13"
+    when
+    c:Conditions()
+    then
+    System.out.println("规则13");
+end
+
+rule "rule 14"
+    when
+    c:Conditions()
+    then
+    System.out.println("规则14");
+end
+
+rule "rule 15"
+    when
+    c:Conditions()
+    then
+    System.out.println("规则15");
+end
+
+rule "rule 16"
+    when
+    c:Conditions()
+    then
+    System.out.println("规则16");
+end
+
+rule "rule 17"
+    when
+    c:Conditions()
+    then
+    System.out.println("规则17");
+end
+
+rule "rule 18"
+    when
+    c:Conditions()
+    then
+    System.out.println("规则18");
+end
+
+rule "rule 19"
+    when
+    c:Conditions()
+    then
+    System.out.println("规则19");
+end
+
+rule "rule 20"
+    when
+    c:Conditions()
+    then
+    System.out.println("规则20");
+end
+
+rule "rule 21"
+    when
+    c:Conditions()
+    then
+    System.out.println("规则21");
+end
+
+rule "rule 22"
+    when
+    c:Conditions()
+    then
+    System.out.println("规则22");
+end
+
+rule "rule 23"
+    when
+    c:Conditions()
+    then
+    System.out.println("规则23");
+end
+
+rule "rule 24"
+    when
+    c:Conditions()
+    then
+    System.out.println("规则24");
+end
+
+rule "rule 25"
+    when
+    c:Conditions()
+    then
+    System.out.println("规则25");
+end
+
+rule "rule 26"
+    when
+    c:Conditions()
+    then
+    System.out.println("规则26");
+end
+
+rule "rule 27"
+    when
+    c:Conditions()
+    then
+    System.out.println("规则27");
+end
+rule "rule 28"
+    when
+    c:Conditions()
+    then
+    System.out.println("规则28");
+end
+
+rule "rule 29"
+    when
+    c:Conditions()
+    then
+    System.out.println("规则29");
+end
+
+rule "rule 30"
+    when
+    c:Conditions()
+    then
+    System.out.println("规则30");
+end
+
+rule "rule 31"
+    when
+    c:Conditions()
+    then
+    System.out.println("规则31");
+end
+
+rule "rule 32"
+    when
+    c:Conditions()
+    then
+    System.out.println("规则32");
+end
+rule "rule 33"
+    when
+    c:Conditions()
+    then
+    System.out.println("规则33");
+end
+
+rule "rule 34"
+    when
+    c:Conditions()
+    then
+    System.out.println("规则34");
+end
+
+
+rule "rule 35"
+    when
+    c:Conditions()
+    then
+    System.out.println("规则35");
+end
+
+rule "rule 36"
+    when
+    c:Conditions()
+    then
+    System.out.println("规则36");
+end
+
+rule "rule 37"
+    when
+    c:Conditions()
+    then
+    System.out.println("规则37");
+end
+
+rule "rule 38"
+    when
+    c:Conditions()
+    then
+    System.out.println("规则38");
+end
+
+rule "rule 39"
+    when
+    c:Conditions()
+    then
+    System.out.println("规则39");
+end
+
+rule "rule 40"
+    when
+    c:Conditions()
+    then
+    System.out.println("规则40");
+end
+
+rule "rule 41"
+    when
+    c:Conditions()
+    then
+    System.out.println("规则41");
+end
+
+rule "rule 42"
+    when
+    c:Conditions()
+    then
+    System.out.println("规则42");
+end
+
+rule "rule 43"
+    when
+    c:Conditions()
+    then
+    System.out.println("规则43");
+end
+rule "rule 44"
+    when
+    c:Conditions()
+    then
+    System.out.println("规则44");
+end
+
+rule "rule 45"
+    when
+    c:Conditions()
+    then
+    System.out.println("规则45");
+end
+
+rule "rule 46"
+    when
+    c:Conditions()
+    then
+    System.out.println("规则46");
+end
+
+rule "rule 47"
+    when
+    c:Conditions()
+    then
+    System.out.println("规则47");
+end
+
+rule "rule 48"
+    when
+    c:Conditions()
+    then
+    System.out.println("规则48");
+end
+
+rule "rule 49"
+    when
+    c:Conditions()
+    then
+    System.out.println("规则49");
+end
+
+rule "rule 50"
+    when
+    c:Conditions()
+    then
+    System.out.println("规则50");
+end
+rule "rule 51"
+    when
+    c:Conditions()
+    then
+    System.out.println("规则51");
+end
+rule "rule 52"
+    when
+    c:Conditions()
+    then
+    System.out.println("规则52");
+end
+
+rule "rule 53"
+    when
+    c:Conditions()
+    then
+    System.out.println("规则53");
+end
+
+rule "rule 54"
+    when
+    c:Conditions()
+    then
+    System.out.println("规则54");
+end
+
+rule "rule 55"
+    when
+    c:Conditions()
+    then
+    System.out.println("规则56");
+end
+
+rule "rule 57"
+    when
+    c:Conditions()
+    then
+    System.out.println("规则57");
+end
+
+rule "rule 58"
+    when
+    c:Conditions()
+    then
+    System.out.println("规则58");
+end
+rule "rule 59"
+    when
+    c:Conditions()
+    then
+    System.out.println("规则59");
+end
+
+rule "rule 60"
+    when
+    c:Conditions()
+    then
+    System.out.println("规则60");
+end
+
+
+
+
+
+
+

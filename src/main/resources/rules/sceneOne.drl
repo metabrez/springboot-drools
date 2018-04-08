@@ -1,0 +1,51 @@
+package rules;
+dialect  "java"
+
+import com.example.model.Conditions
+import com.example.model.Results
+import com.example.utils.TimeHelper
+import com.example.utils.IpHelper
+
+//手机端的客户访问  预期：拒绝  返回错误信息：终端不匹配
+rule "conditions app"
+    when
+        c:Conditions(c.getApp() == "app")
+    then
+    Results r = new  Results();
+    r.setErrorMessage("终端不匹配");
+    r.setFlag("拒绝");
+    System.out.println("终端不匹配");
+end
+
+//客户端24点访问  预期：拒绝  返回错误信息：时间不匹配
+rule "conditions client"
+    when
+        c:Conditions(c.getClient() == "client"  && TimeHelper.isBelong())
+    then
+    Results r = new  Results();
+    r.setErrorMessage("时间不匹配");
+    r.setFlag("拒绝");
+    System.out.println("客户端时间不匹配");
+end
+
+// 允许IP范围内且在允许的时间访问 预期：允许
+rule "conditions time"
+    when
+        c:Conditions(IpHelper.ipExistsInRangeTest(c.getIp()) && TimeHelper.isBelong())
+    then
+    Results r = new Results();
+    r.setErrorMessage("");
+    r.setFlag("允许");
+    System.out.println("在时间允许范围内访问");
+end
+
+//允许IP范围内的客户端访问  预期：允许
+rule "conditions ip"
+    when
+        c:Conditions(IpHelper.ipExistsInRangeTest(c.getIp()))
+    then
+    Results r = new Results();
+    r.setErrorMessage("");
+    r.setFlag("允许");
+    System.out.println("在ip允许范围内访问");
+end
